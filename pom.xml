@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>dev.flavorful404</groupId>
 	<artifactId>flair</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>flair</name>
 	<description>Flashcard Learning And Intelligent Repetition</description>
 	<properties>
