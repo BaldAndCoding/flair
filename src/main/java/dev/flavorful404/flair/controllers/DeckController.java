@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/decks")
 public class DeckController {
-    private DeckRepository repo;
+    private final DeckRepository repo;
     public DeckController(DeckRepository repo) {
         this.repo = repo;
     }
