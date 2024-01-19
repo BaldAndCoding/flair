@@ -1,0 +1,5 @@
+CREATE TABLE flair.deck (
+  did   SERIAL PRIMARY KEY,
+  name  TEXT UNIQUE NOT NULL,
+  is_retired BOOL NOT NULL DEFAULT FALSE
+);
