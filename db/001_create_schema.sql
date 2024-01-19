@@ -1,1 +1,1 @@
-CREATE DATABASE flair;
+CREATE SCHEMA flair;

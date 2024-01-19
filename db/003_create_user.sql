@@ -1,5 +1,7 @@
 CREATE USER flair_app_user WITH PASSWORD 'flair_pass';
 
+GRANT USAGE ON SCHEMA flair TO flair_app_user;
+
 GRANT SELECT, UPDATE, INSERT
 ON ALL TABLES
 IN SCHEMA flair
