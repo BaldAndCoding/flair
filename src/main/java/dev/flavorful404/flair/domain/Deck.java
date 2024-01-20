@@ -2,6 +2,8 @@ package dev.flavorful404.flair.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 import org.hibernate.proxy.HibernateProxy;
 
 import java.util.Objects;
@@ -11,6 +13,8 @@ import java.util.Objects;
 @Setter
 @ToString
 @RequiredArgsConstructor
+@SQLDelete(sql = "UPDATE flair.deck SET retired = true WHERE did=?")
+@Where(clause = "retired=false")
 public class Deck {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +25,7 @@ public class Deck {
     private String name;
 
     @Column(nullable = false)
-    private boolean is_retired;
+    private boolean retired;
 
     @Override
     public final boolean equals(Object o) {

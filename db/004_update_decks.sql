@@ -1,0 +1,1 @@
+ALTER TABLE flair.deck RENAME COLUMN is_retired to retired;

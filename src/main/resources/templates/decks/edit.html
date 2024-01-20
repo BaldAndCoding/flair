@@ -1,0 +1,12 @@
+<h1>Edit Deck</h1>
+
+<a th:href="${'/decks/' + {deck.getDid()}}">
+    <button>Cancel</button>
+</a><br/>
+
+<form action="#" th:action="@{/decks/update}" th:object="${deck}" method="post">
+    Name: <input type="text" th:field="*{name}" /><br/>
+    <input type="hidden" th:field="*{did}" id="did">
+    <input type="submit" value="Submit" />
+</form>
+

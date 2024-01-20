@@ -1,0 +1,19 @@
+<html>
+    <h1>Deck</h1>
+
+    <span th:text="${deck.getDid()}" /><br/>
+    <span th:text="${deck.getName()}" /><br/>
+
+    <a th:href="${'/decks/' + {deck.getDid()} + '/edit'}">
+        <button>Edit</button>
+    </a><br/>
+
+    <form method="POST" th:action="${'/decks/' + {deck.getDid()} + '/retire'}">
+        <button type="submit" name="submit">Retire</button>
+    </form><br/>
+
+    <a href="/decks">
+        <button>See All</button>
+    </a><br/>
+
+</html>
